@@ -1,80 +1,213 @@
-IAM Scenario Questions (100 Real-World Scenarios)
+Here are just the 100 IAM scenario questions (no answers):
 
-EASY (1–30) 1. A developer cannot access S3 bucket. Which IAM component
-should you check first? 2. An IAM user has no permissions. What is the
-default behavior? 3. You attached a policy but access is still denied.
-What are possible reasons? 4. Difference between IAM user and IAM role
-in real usage? 5. When should you use IAM group instead of attaching
-policy directly? 6. A new user cannot log in to AWS console. What might
-be missing? 7. What is the purpose of AWS managed policies? 8. Can IAM
-policies allow access without explicit attachment? 9. What happens if
-both allow and deny exist in policy? 10. A user deleted access key and
-lost CLI access. Why? 11. Why should root account not be used daily? 12.
-What is MFA and why is it important in IAM? 13. Can IAM roles be
-assigned to users directly? 14. What is implicit deny in IAM? 15. What
-is explicit allow? 16. Can IAM policies be attached to S3 buckets? 17.
-What is the difference between identity-based and resource-based policy?
-18. Why do we need IAM groups in enterprise? 19. What happens if IAM
-policy JSON has syntax error? 20. Can IAM users share credentials? 21.
-What is best practice for access keys rotation? 22. How do you disable a
-compromised IAM user? 23. What is AWS IAM password policy? 24. What
-happens when user is removed from group? 25. Can IAM roles be used
-outside AWS? 26. What is trust policy in IAM role? 27. Why is least
-privilege important? 28. What is AWS managed vs customer managed policy?
-29. Can IAM policies be version controlled? 30. What is the difference
-between console login and programmatic access?
+---
 
-MEDIUM (31–70) 31. A Lambda function cannot access DynamoDB. How do you
-debug IAM? 32. EC2 instance cannot access S3 even after attaching role.
-Why? 33. Cross-account S3 access is failing. What should you check? 34.
-A user can access S3 but not specific bucket. Why? 35. How does IAM
-policy evaluation logic work internally? 36. Explain explicit deny vs
-implicit deny with scenario. 37. How does AWS evaluate multiple policies
-together? 38. A developer has admin access but still gets denied. Why?
-39. Why does resource-based policy override identity-based policy
-sometimes? 40. How do you secure production IAM roles? 41. How do you
-design IAM for microservices architecture? 42. What is STS and why is it
-used? 43. How does AssumeRole work in real systems? 44. Why do we use
-temporary credentials instead of long-term keys? 45. A third-party
-vendor needs limited AWS access. How do you design IAM? 46. How do you
-restrict IAM access by IP address? 47. What is condition key in IAM
-policy? 48. How do you restrict S3 access to a specific VPC endpoint?
-49. Why is IAM policy simulation useful? 50. How do you debug
-“AccessDenied” in production logs? 51. What is permission boundary in
-IAM? 52. Why do organizations use permission boundaries? 53. What is SCP
-in AWS Organizations? 54. Difference between SCP and IAM policy? 55. How
-do SCPs restrict even admin users? 56. What happens if SCP denies but
-IAM allows? 57. How do you design IAM for CI/CD pipelines? 58. How does
-GitHub Actions use IAM roles? 59. How do you prevent privilege
-escalation in IAM? 60. What is role chaining in IAM? 61. What are common
-IAM misconfigurations in real companies? 62. How do you audit IAM
-activity? 63. What is AWS CloudTrail role in IAM debugging? 64. How do
-you rotate IAM credentials automatically? 65. What is session policy in
-STS? 66. How do you enforce MFA for all users? 67. What is federated
-identity in AWS IAM? 68. How does SAML integration work with IAM? 69.
-Why is IAM considered a global service? 70. How do you design IAM for
-multi-account AWS setup?
+## EASY (1–30)
 
-HARD (71–100) 71. Production outage: S3 access suddenly broken for all
-services. How do you investigate IAM? 72. A developer escalated
-privileges without admin knowing. How is it possible? 73. How would you
-detect IAM privilege escalation attack? 74. Explain full IAM policy
-evaluation flow step-by-step. 75. How do AWS Organizations SCP + IAM +
-RBAC interact? 76. A role works in dev but fails in prod. Why? 77. How
-do you implement zero-trust IAM architecture in AWS? 78. How would you
-design IAM for a fintech system? 79. How do you prevent confused deputy
-problem in IAM? 80. Difference between AssumeRole and PassRole in attack
-scenarios. 81. How can IAM be exploited if misconfigured? 82. What is
-policy evaluation order in multi-account setups? 83. How do you enforce
-fine-grained S3 access per object? 84. How do ABAC policies work in IAM?
-85. When should ABAC be preferred over RBAC? 86. How do IAM policies
-scale in large enterprises? 87. How do you design break-glass access?
-88. How do you secure root account in AWS org? 89. What IAM condition
-keys are commonly used? 90. How do you detect unused IAM roles? 91. How
-do you automate IAM compliance checks? 92. How do you integrate IAM with
-SIEM tools? 93. How do you design cross-cloud IAM strategy? 94. What
-happens if IAM policy has conflicting conditions? 95. How do you prevent
-lateral movement using IAM? 96. How do IAM roles behave in ECS/EKS? 97.
-How do you secure IMDS from IAM attacks? 98. What is token theft attack
-in IAM? 99. How do you implement least privilege at scale? 100. Design a
-full IAM architecture for startup AWS migration.
+1. A developer cannot access S3 bucket. Which IAM component should you check first?
+
+2. An IAM user has no permissions. What is the default behavior?
+
+3. You attached a policy but access is still denied. What are possible reasons?
+
+4. Difference between IAM user and IAM role in real usage?
+
+5. When should you use IAM group instead of attaching policy directly?
+
+6. A new user cannot log in to AWS console. What might be missing?
+
+7. What is the purpose of AWS managed policies?
+
+8. Can IAM policies allow access without explicit attachment?
+
+9. What happens if both allow and deny exist in policy?
+
+10. A user deleted access key and lost CLI access. Why?
+
+11. Why should root account not be used daily?
+
+12. What is MFA and why is it important in IAM?
+
+13. Can IAM roles be assigned to users directly?
+
+14. What is implicit deny in IAM?
+
+15. What is explicit allow?
+
+16. Can IAM policies be attached to S3 buckets?
+
+17. What is the difference between identity-based and resource-based policy?
+
+18. Why do we need IAM groups in enterprise?
+
+19. What happens if IAM policy JSON has syntax error?
+
+20. Can IAM users share credentials?
+
+21. What is best practice for access keys rotation?
+
+22. How do you disable a compromised IAM user?
+
+23. What is AWS IAM password policy?
+
+24. What happens when user is removed from group?
+
+25. Can IAM roles be used outside AWS?
+
+26. What is trust policy in IAM role?
+
+27. Why is least privilege important?
+
+28. What is AWS managed vs customer managed policy?
+
+29. Can IAM policies be version controlled?
+
+30. What is the difference between console login and programmatic access?
+
+---
+
+## MEDIUM (31–70)
+
+31. A Lambda function cannot access DynamoDB. How do you debug IAM?
+
+32. EC2 instance cannot access S3 even after attaching role. Why?
+
+33. Cross-account S3 access is failing. What should you check?
+
+34. A user can access S3 but not specific bucket. Why?
+
+35. How does IAM policy evaluation logic work internally?
+
+36. Explain explicit deny vs implicit deny with scenario.
+
+37. How does AWS evaluate multiple policies together?
+
+38. A developer has admin access but still gets denied. Why?
+
+39. Why does resource-based policy override identity-based policy sometimes?
+
+40. How do you secure production IAM roles?
+
+41. How do you design IAM for microservices architecture?
+
+42. What is STS and why is it used?
+
+43. How does AssumeRole work in real systems?
+
+44. Why do we use temporary credentials instead of long-term keys?
+
+45. A third-party vendor needs limited AWS access. How do you design IAM?
+
+46. How do you restrict IAM access by IP address?
+
+47. What is condition key in IAM policy?
+
+48. How do you restrict S3 access to a specific VPC endpoint?
+
+49. Why is IAM policy simulation useful?
+
+50. How do you debug "AccessDenied" in production logs?
+
+51. What is permission boundary in IAM?
+
+52. Why do organizations use permission boundaries?
+
+53. What is SCP in AWS Organizations?
+
+54. Difference between SCP and IAM policy?
+
+55. How do SCPs restrict even admin users?
+
+56. What happens if SCP denies but IAM allows?
+
+57. How do you design IAM for CI/CD pipelines?
+
+58. How does GitHub Actions use IAM roles?
+
+59. How do you prevent privilege escalation in IAM?
+
+60. What is role chaining in IAM?
+
+61. What are common IAM misconfigurations in real companies?
+
+62. How do you audit IAM activity?
+
+63. What is AWS CloudTrail role in IAM debugging?
+
+64. How do you rotate IAM credentials automatically?
+
+65. What is session policy in STS?
+
+66. How do you enforce MFA for all users?
+
+67. What is federated identity in AWS IAM?
+
+68. How does SAML integration work with IAM?
+
+69. Why is IAM considered a global service?
+
+70. How do you design IAM for multi-account AWS setup?
+
+---
+
+## HARD (71–100)
+
+71. Production outage: S3 access suddenly broken for all services. How do you investigate IAM?
+
+72. A developer escalated privileges without admin knowing. How is it possible?
+
+73. How would you detect IAM privilege escalation attack?
+
+74. Explain full IAM policy evaluation flow step-by-step.
+
+75. How do AWS Organizations SCP + IAM + RBAC interact?
+
+76. A role works in dev but fails in prod. Why?
+
+77. How do you implement zero-trust IAM architecture in AWS?
+
+78. How would you design IAM for a fintech system?
+
+79. How do you prevent confused deputy problem in IAM?
+
+80. Difference between AssumeRole and PassRole in attack scenarios.
+
+81. How can IAM be exploited if misconfigured?
+
+82. What is policy evaluation order in multi-account setups?
+
+83. How do you enforce fine-grained S3 access per object?
+
+84. How do ABAC policies work in IAM?
+
+85. When should ABAC be preferred over RBAC?
+
+86. How do IAM policies scale in large enterprises?
+
+87. How do you design break-glass access?
+
+88. How do you secure root account in AWS org?
+
+89. What IAM condition keys are commonly used?
+
+90. How do you detect unused IAM roles?
+
+91. How do you automate IAM compliance checks?
+
+92. How do you integrate IAM with SIEM tools?
+
+93. How do you design cross-cloud IAM strategy?
+
+94. What happens if IAM policy has conflicting conditions?
+
+95. How do you prevent lateral movement using IAM?
+
+96. How do IAM roles behave in ECS/EKS?
+
+97. How do you secure IMDS from IAM attacks?
+
+98. What is token theft attack in IAM?
+
+99. How do you implement least privilege at scale?
+
+100. Design a full IAM architecture for startup AWS migration.
