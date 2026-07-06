@@ -1,0 +1,40 @@
+AWS EC2 Scenario Practice (100-Scenario Starter)
+
+Use this template for every scenario:
+
+1.  Workload type:
+2.  CPU requirement:
+3.  Memory requirement:
+4.  Storage requirement:
+5.  Network requirement:
+6.  Recommended EC2 family:
+7.  Recommended size:
+8.  EBS type & size:
+9.  Why?
+10. Cost optimization:
+11. Monitoring metrics (CloudWatch):
+
+------------------------------------------------------------------------
+
+Scenario 1 Small Flask API - 200 users/day - RAM 2 GB - Storage 30 GB
+
+Scenario 2 Java Spring Boot - 5,000 concurrent users - Heap 12 GB -
+Storage 100 GB
+
+Scenario 3 Video transcoding - CPU 95% - RAM 4 GB - Storage 200 GB
+
+Scenario 4 Redis cache - Dataset 60 GB in memory
+
+Scenario 5 MySQL - 1 TB data - High IOPS - RAM 32 GB
+
+Continue creating your own scenarios: - WordPress - Jenkins - GitLab -
+Elasticsearch - Kafka - RabbitMQ - Nginx reverse proxy - ML inference -
+Batch jobs - Media streaming - Gaming backend - Banking application -
+E-commerce sale day - ERP - SAP HANA - CI/CD runners - Docker host -
+Kubernetes worker - Monitoring server - Logging server
+
+Memory tricks: T = Tiny/Test M = Mixed (General Purpose) C = CPU R = RAM
+I = IOPS / Storage G = Graphics GPU P = AI/HPC GPU X = eXtra Memory
+
+Rule: Start small -> Monitor -> Resize based on CPU, Memory, Disk,
+Network metrics.
